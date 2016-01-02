@@ -33,6 +33,8 @@
 
 #include "video_core/debug_utils/debug_utils.h"
 
+#include "common\cheatmanager.h"
+
 
 namespace GPU {
 
@@ -424,6 +426,9 @@ static void VBlankCallback(u64 userdata, int cycles_late) {
 
     // Reschedule recurrent event
     CoreTiming::ScheduleEvent(frame_ticks - cycles_late, vblank_event);
+
+    // Apply cheat codes.
+    Cheats::cheatManager->Update();
 }
 
 /// Initialize hardware

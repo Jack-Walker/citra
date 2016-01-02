@@ -96,6 +96,7 @@ private slots:
     void OnMenuSelectGameListRoot();
     void OnMenuRecentFile();
     void OnOpenHotkeysDialog();
+    void OnCheatsDialog();
     void OnConfigure();
     void OnDisplayTitleBars(bool);
     void SetHardwareRendererEnabled(bool);

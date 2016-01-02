@@ -15,6 +15,7 @@
 #include "citra_qt/game_list.h"
 #include "citra_qt/hotkeys.h"
 #include "citra_qt/main.h"
+#include "citra_qt/cheats.h"
 
 // Debugger
 #include "citra_qt/debugger/callstack.h"
@@ -184,6 +185,7 @@ GMainWindow::GMainWindow() : emu_thread(nullptr)
     connect(ui.action_Use_Gdbstub, SIGNAL(triggered(bool)), this, SLOT(SetGdbstubEnabled(bool)));
     connect(ui.action_Single_Window_Mode, SIGNAL(triggered(bool)), this, SLOT(ToggleWindowMode()));
     connect(ui.action_Hotkeys, SIGNAL(triggered()), this, SLOT(OnOpenHotkeysDialog()));
+    connect(ui.action_Cheats, SIGNAL(triggered()), this, SLOT(OnCheatsDialog()));
 
     connect(this, SIGNAL(EmulationStarting(EmuThread*)), disasmWidget, SLOT(OnEmulationStarting(EmuThread*)));
     connect(this, SIGNAL(EmulationStopping()), disasmWidget, SLOT(OnEmulationStopping()));
@@ -445,6 +447,11 @@ void GMainWindow::OnStopGame() {
 
 void GMainWindow::OnOpenHotkeysDialog() {
     GHotkeysDialog dialog(this);
+    dialog.exec();
+}
+
+void GMainWindow::OnCheatsDialog() {
+    GCheatsDialog dialog(this);
     dialog.exec();
 }
 

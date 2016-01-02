@@ -23,6 +23,8 @@ set(SRCS
             bootmanager.cpp
             hotkeys.cpp
             main.cpp
+            cheats.cpp
+            cheats_add.cpp
             citra-qt.rc
             Info.plist
             )
@@ -50,6 +52,8 @@ set(HEADERS
             bootmanager.h
             hotkeys.h
             main.h
+            cheats.h
+            cheats_add.h
             version.h
             )
 
@@ -61,6 +65,8 @@ set(UIS
             debugger/registers.ui
             hotkeys.ui
             main.ui
+            cheats.ui
+            cheats_add.ui
             )
 
 create_directory_groups(${SRCS} ${HEADERS} ${UIS})

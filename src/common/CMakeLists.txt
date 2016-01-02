@@ -3,6 +3,7 @@ configure_file("${CMAKE_CURRENT_SOURCE_DIR}/scm_rev.cpp.in" "${CMAKE_CURRENT_SOU
 
 set(SRCS
             break_points.cpp
+            cheatmanager.cpp
             emu_window.cpp
             file_util.cpp
             hash.cpp
@@ -26,6 +27,7 @@ set(HEADERS
             bit_field.h
             bit_set.h
             break_points.h
+            cheatmanager.h
             chunk_file.h
             code_block.h
             color.h

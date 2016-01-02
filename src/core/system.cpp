@@ -13,6 +13,7 @@
 #include "video_core/video_core.h"
 
 #include "core/gdbstub/gdbstub.h"
+#include "common/cheatmanager.h"
 
 namespace System {
 
@@ -25,6 +26,7 @@ void Init(EmuWindow* emu_window) {
     HLE::Init();
     VideoCore::Init(emu_window);
     GDBStub::Init();
+    Cheats::Init();
 }
 
 void Shutdown() {

@@ -31,6 +31,8 @@
 
 #include "video_core/video_core.h"
 
+#include "common\cheatmanager.h"
+
 
 static void PrintHelp()
 {
